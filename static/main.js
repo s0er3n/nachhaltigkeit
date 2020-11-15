@@ -1,4 +1,13 @@
 
+
+
+
+
+
+
+
+
+
 var mymap = L.map('mapid').setView([52.521918, 13.4132159], 11
 );
 
@@ -12,8 +21,20 @@ for (marker of data) {
     if (Object.keys(marker).length === 0) {
         continue;
     }
+    var popUpHtml = `
+            <h4 class="card-title">${marker.name}</h4>
+            <h6 class="text-muted card-subtitle mb-2">${(marker.category).join(" ")}</h6><img class="rounded img-fluid" src="static/img/${marker.filename}">
+            <h4>Infos:</h4>
+            <p class="card-text">${marker.info}</p>
+            <h4>Warum ist dieser Ort nachhaltig?</h4>
+            <p class="card-text">${marker.reason}</p>
+            <a href="${marker.website}"><button type="button" class="btn btn-outline-info"><i class="far fa-window-maximize"></i>  Webseite</button></a>
+<a href="${marker.googlemaps}"><button type="button" class="btn btn-outline-info"><i class="fas fa-globe-europe"></i>  Google Maps</button></a>
+`
+
+
     for (category of marker.category) {
-        (categories[category] = categories.category || []).push(L.marker([marker.lat, marker.lon]).bindPopup(`<h1>${marker.name}</h1><br>${marker.category}<br><img src="static/img/${marker.filename}" "><a href="${marker.website}" target="_blank" rel="noopener noreferrer">zur Webseite</a><br>${marker.info}<br><a href="http://www.google.com/maps/place/${marker.lat},${marker.lon}" target="_blank" rel="noopener noreferrer">Ort bei Google Maps</a>`).on('click', function (e) {
+        (categories[category] = categories.category || []).push(L.marker([marker.lat, marker.lon]).bindPopup(popUpHtml).on('click', function (e) {
             mymap.setView(e.latlng, 13);
         }));
     }

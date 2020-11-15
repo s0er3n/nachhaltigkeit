@@ -1,1 +1,34 @@
-{"markers": {"1": {"name": "123", "website": "https://www.google.de", "info": "asjlkd\u00f6aslkd", "category": "asdjlajlks", "reason": "jasdjkalks", "lat": "52", "lon": "12", "filename": "123_Firefox_Logo_2017.png"}, "2": {"name": "123", "website": "https://www.google.de", "info": "asjlkd\u00f6aslkd", "category": "asdjlajlks", "reason": "jasdjkalks", "lat": "52", "lon": "12", "filename": "123_Firefox_Logo_2017.png"}, "3": {"name": "123", "website": "https://www.google.de", "info": "asjlkd\u00f6aslkd", "category": "asdjlajlks", "reason": "jasdjkalks", "lat": "52", "lon": "12", "filename": "123_Firefox_Logo_2017.png"}, "4": {"name": "123", "website": "https://www.google.de", "info": "asjlkd\u00f6aslkd", "category": "asdjlajlks", "reason": "jasdjkalks", "lat": "52", "lon": "12", "filename": "123_Firefox_Logo_2017.png"}, "5": {"name": "123", "website": "https://www.google.de", "info": "asjlkd\u00f6aslkd", "category": "asdjlajlks", "reason": "jasdjkalks", "lat": "52", "lon": "12", "filename": "123_Firefox_Logo_2017.png"}, "6": {"name": "asda", "website": "https://www.google.de", "info": "asd", "category": "asd", "reason": "asd", "lat": "123", "lon": "123", "filename": "asda_borat-2-prime2.jpg"}, "7": {"name": "asda", "website": "https://www.google.de", "info": "asd", "category": "asd", "reason": "asd", "lat": "52", "lon": "14", "filename": "asda_borat-2-prime2.jpg"}, "8": {"name": "ajsd", "website": "https://www.google.de", "info": "asda", "category": ["asdasd", "asds", "asd", "a", ""], "reason": "asdajsd\u00f6lk", "lat": "52", "lon": "13", "filename": "ajsd_IMG_20201006_132922_1.jpg"}, "9": {"name": "asda", "website": "https://www.google.de", "info": "asd", "category": ["asdasd", "asds", "asd", "a"], "reason": "asd", "lat": "52", "lon": "15", "filename": "asda_Lernen_Bibliothek-e1492112893433.jpg"}, "10": {"name": "asda", "website": "https://www.google.de", "info": "asd", "category": ["asdasd", "asds", "asd", "a"], "reason": "asd", "lat": "52", "lon": "15", "filename": "asda_Lernen_Bibliothek-e1492112893433.jpg"}}}
+{
+    "markers": {
+        "13": {
+            "name": "Bioladen",
+            "website": "https://google.de",
+            "info": "a\u00f6sdjk",
+            "category": [
+                "ajlksd",
+                "asdasd",
+                "asd",
+                "Essen"
+            ],
+            "googlemaps": "https://www.google.com/maps/@52.4733255,13.4941131,12z",
+            "lat": "52.4733255",
+            "lon": "13.4941131",
+            "filename": "Bioladen_Lernen_Bibliothek-e1492112893433.jpg"
+        },
+        "14": {
+            "name": "Bioladen",
+            "website": "https://google.de",
+            "info": "a\u00f6sdjk",
+            "category": [
+                "ajlksd",
+                "asdasd",
+                "asd",
+                "Essen"
+            ],
+            "googlemaps": "https://www.google.com/maps/@52.4733255,13.4941131,12z",
+            "lat": "52.4733255",
+            "lon": "13.4941131",
+            "filename": "Bioladen_Lernen_Bibliothek-e1492112893433.jpg"
+        }
+    }
+}

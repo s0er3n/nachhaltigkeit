@@ -38,6 +38,8 @@ def addLocation():
         if img and allowed_file(img.filename):
             filename = secure_filename(img.filename)
             data = dict(request.form)
+            data["lat"], data["lon"] = data["googlemaps"].split(
+                "@")[1].split(",")[0:2]
             filename = data.get("name") + "_" + filename
             data["category"] = [c.strip()
                                 for c in data["category"].split(",") if c.strip() != ""]

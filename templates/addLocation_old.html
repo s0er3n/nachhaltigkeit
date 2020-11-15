@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add a Location</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <form method="post" enctype='multipart/form-data'>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="website">Website:</label><br>
+        <input type="url" id="website" name="website" required><br>
+        <label for="info">Info:</label><br>
+        <textarea type="text" id="info" name="info" required></textarea><br>
+        <label for="category">Category(if more than one seperate by comma):</label><br>
+        <input type="text" id="category" name="category"><br>
+        <label for="reason">Why is this shop sustainable?:</label><br>
+        <textarea type="text" id="reason" name="reason" required></textarea><br>
+        <label for="lat">
+            Latitude:<br>
+            <input type="number" step="any" name="lat" id="lat" required><br>
+        </label>
+        <label for="lon">
+            Longitude:<br>
+            <input type="number" step="any" name="lon" id="lon" required>
+        </label><br>
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept="image/*" required><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

@@ -1,26 +1,10 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-html, body, #mapid {
-    height: 90%;
-    width: 100vw;
-}
-
-
-h1
-{
-    text-align: center;
-    font-family: "Arial";
-}
-
-
-textarea
-{
-    height: 200px;
-}
-
 img {
     width: 100%;
     height: auto;
+}
+
+#mapid
+{
+    height: 80vh;
+
 }
