@@ -1,4 +1,12 @@
-#mapid { height: 90vh; width: 100vh; margin:0px auto; }
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #mapid {
+    height: 90%;
+    width: 100vw;
+}
+
 
 h1
 {

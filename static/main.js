@@ -30,3 +30,5 @@ var control = L.control.layers({ "Karte": base }, categories, options = {
     "collapsed": false
 
 }).addTo(mymap);
+
+//mymap.locate({ setView: true, maxZoom: 11 });
