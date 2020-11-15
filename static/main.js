@@ -23,13 +23,13 @@ for (marker of data) {
     }
     var popUpHtml = `
             <h4 class="card-title">${marker.name}</h4>
-            <h6 class="text-muted card-subtitle mb-2">${(marker.category).join(" ")}</h6><img class="rounded img-fluid" src="static/img/${marker.filename}">
+            <h6 class="text-muted card-subtitle mb-2">${(marker.category).join(" ").toUpperCase()}</h6><img class="rounded img-fluid" src="static/img/${marker.filename}">
             <h4>Infos:</h4>
-            <p class="card-text">${marker.info}</p>
+            <p class="card-text">${(marker.info).replace(/\r\n/g, "<br>")}</p>
             <h4>Warum ist dieser Ort nachhaltig?</h4>
-            <p class="card-text">${marker.reason}</p>
-            <a href="${marker.website}"><button type="button" class="btn btn-outline-info"><i class="far fa-window-maximize"></i>  Webseite</button></a>
-<a href="${marker.googlemaps}"><button type="button" class="btn btn-outline-info"><i class="fas fa-globe-europe"></i>  Google Maps</button></a>
+            <p class="card-text">${(marker.reason).replace(/\r\n/g, "<br>")}</p>
+            <a href="${marker.website}" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-outline-info"> Webseite</button></a>
+<a href="${marker.googlemaps}" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-outline-info"> Google Maps</button></a>
 `
 
 
