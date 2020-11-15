@@ -39,6 +39,8 @@ def addLocation():
             filename = secure_filename(img.filename)
             data = dict(request.form)
             filename = data.get("name") + "_" + filename
+            data["category"] = [c.strip()
+                                for c in data["category"].split(",") if c.strip() != ""]
             data["filename"] = filename
             global_data.insert(data)
             img.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
