@@ -13,3 +13,8 @@ textarea
 {
     white-space: pre-wrap;
 }
+
+.leaflet-popup-content-wrapper
+{
+    font-size: small;
+}

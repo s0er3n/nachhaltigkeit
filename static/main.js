@@ -34,8 +34,9 @@ for (marker of data) {
 
 
     for (category of marker.category) {
-        (categories[category] = categories.category || []).push(L.marker([marker.lat, marker.lon]).bindPopup(popUpHtml).on('click', function (e) {
-            mymap.setView(e.latlng, 13);
+        (categories[category] = categories.category || []).push(L.marker([marker.lat, marker.lon]).bindPopup(popUpHtml, options = {
+
+            maxHeight: 500,
         }));
     }
 }
