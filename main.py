@@ -29,7 +29,7 @@ def main():
 def addLocation():
     global global_data
     if request.method == 'POST':
-        if 'img' not in request.files:  # hier ist ein fehler
+        if 'img' not in request.files:
             flash('No file part')
             return redirect(request.url)
         img = request.files['img']
@@ -43,12 +43,19 @@ def addLocation():
             filename = data.get("name") + "_" + filename
             data["category"] = [c.strip()
                                 for c in data["category"].split(",") if c.strip() != ""]
+            data["approved"] = False
             data["filename"] = filename
             global_data.insert(data)
             img.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return render_template("main.html", data=global_data.all())
 
     return render_template("addLocation.html")
+
+@app.route("/admin")
+def admin():
+    global global_data
+    res = global_data.search(Query()["approved"] == False) 
+    return render_template("admin.html", data=res) 
 
 
 if __name__ == '__main__':

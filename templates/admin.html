@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ADMIN</title>
+</head>
+<body>
+  {% for marker in data %}
+
+  <h4 class="card-title">{{marker.name}}</h4>
+  <h6 class="text-muted card-subtitle mb-2">{{marker.category}}</h6><img class="rounded img-fluid" src="static/img/{{marker.filename}}">
+            <h4>Infos:</h4>
+            <p class="card-text">{{marker.info}}</p>
+            <h4>Warum ist dieser Ort nachhaltig?</h4>
+            <p class="card-text">{{marker.reason}}</p>
+            <a href="{{marker.website}}" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-outline-info"> Webseite</button></a>
+            <a href="{{marker.googlemaps}}" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-outline-info"> Google Maps</button></a>
+  {% endfor %}
+</body>
+
+</html>
